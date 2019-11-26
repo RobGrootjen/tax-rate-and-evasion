@@ -6,8 +6,9 @@ The data is sourced from
 * https://en.wikipedia.org/wiki/List_of_countries_by_tax_revenue_to_GDP_ratio
 * https://en.wikipedia.org/wiki/Tax_evasion_in_the_United_States
 
-The data is measured in Percentage ("%") and in US$ Billion. The tables further explanation on the headers.
-If data is "0", it means there no data on it.
+* The data is measured in Percentage ("%") and in US$ Billion. 
+* The tables further explanation on the headers.
+* If data is "0", it means there no data on it.
 
 --------------------------------------------------------------------------------------------------------------------------------
 
