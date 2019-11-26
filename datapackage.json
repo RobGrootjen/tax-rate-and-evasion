@@ -1,0 +1,166 @@
+{
+  "name": "tax",
+  "title": "Tax",
+  "resources": [
+    {
+      "path": "countriesgdprevenue.csv",
+      "pathType": "local",
+      "name": "countriesgdprevenue",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "Country",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Tax as % of GDP",
+            "type": "number",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "countriestaxrate.csv",
+      "pathType": "local",
+      "name": "countriestaxrate",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "Country",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Corporate tax",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Income Tax(lowest marginal rate)",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "Income Tax(highest marginal rate)",
+            "type": "integer",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "process .py",
+      "pathType": "local",
+      "name": "process",
+      "format": "py",
+      "encoding": "ISO-8859-1"
+    },
+    {
+      "path": "requirements.txt",
+      "pathType": "local",
+      "name": "requirements",
+      "format": "txt",
+      "mediatype": "text/plain",
+      "encoding": "ISO-8859-1"
+    },
+    {
+      "path": "unitedstatestaxevasion.csv",
+      "pathType": "local",
+      "name": "unitedstatestaxevasion",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "ISO-8859-1",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "year",
+            "format": "default"
+          },
+          {
+            "name": "Revenue Lost (US$ Billion)",
+            "type": "integer",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "versions.py",
+      "pathType": "local",
+      "name": "versions",
+      "format": "py",
+      "encoding": "ISO-8859-1"
+    }
+  ],
+  "readme": "This data package contains time-series data from the US since 2000 till 2010. How much US$ have been lost every year in tax evasion. Also, includes the Tax Revenue Percentage per country and the current tax rate per country for corporate, and average income. \r\n\r\n## Data\r\nThe data is sourced from \r\n* https://en.wikipedia.org/wiki/List_of_countries_by_tax_rates\r\n* https://en.wikipedia.org/wiki/List_of_countries_by_tax_revenue_to_GDP_ratio\r\n* https://en.wikipedia.org/wiki/Tax_evasion_in_the_United_States\r\n\r\nThe data is measured in Percentage (\"%\") and in US$ Billion. The tables further explanation on the headers.\r\n\r\n--------------------------------------------------------------------------------------------------------------------------------\r\n\r\n## Preparation\r\n\r\nInside the \"Process directory\", there is a file called ```process.py``` which will scrape 3 tables from 3 different sources and clean it up to concrete values and put it into 3 csv files.\r\n\r\n##### Requires:\r\n1. Python\r\n2. Visualstudio / Jupyter notebook / or any platform that works with python.\r\n\r\n##### Necessary python modules for this: \r\n* bs4\r\n* csv\r\n* requests\r\n\r\n##### Instructions:\r\n* Download \"requirements.txt\".\r\n* Go to your terminal and use the following command ```pip install requirements.txt```\r\n* Copy process.py script\r\n* Open in jupyter notebook, python shell, VS code, or any preferred platform.\r\n* Paste and run the code\r\n* 3 CSV´s file will be saved in document where your terminal is at the moment.\r\n\r\n\r\n----------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n## Licence\r\nThis Data Package is made available under the Public Domain Dedication and License v1.0 \r\n\r\n",
+  "description": "This data package contains time-series data from the US since 2000 till 2010. How much US$ have been",
+  "licenses": [
+    {
+      "name": "ODC-PDDL",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License"
+    }
+  ],"views": [
+    {
+      "name": "Tax rate per country in %",
+      "title": "Tax rate per country in %",
+      "resources": ["countriestaxrate"],
+      "specType": "simple",
+      "spec": {
+        "type": "bar",
+        "group": "Country",
+        "series": ["Corporate tax","Income Tax(lowest marginal rate)","Income Tax(highest marginal rate)"]
+    }
+  },{
+      "name": "Tax Revenue to GDP ratio in %",
+      "title": "Tax Revenue to GDP ratio in %",
+      "resources": ["countriesgdprevenue"],
+      "specType": "simple",
+      "spec": {
+        "type": "bar",
+        "group": "Tax as % of GDP",
+        "series": ["Country"]
+  }
+},{
+  "name": "Revenue Lost in Tax Evasion Per Year in US$ Billions in U.S",
+  "title": "Revenue Lost in Tax Evasion Per Year in US$ Billions in U.S",
+  "resources": ["unitedstatestaxevasion"],
+  "specType": "simple",
+  "spec": {
+    "type": "line",
+    "group": "Year",
+    "series": ["Revenue Lost (US$ Billion)"]
+  }
+}   
+]
+}
