@@ -21,7 +21,7 @@ Inside the "Process directory", there is a file called ```process.py``` which wi
 1. Python
 2. Visualstudio / Jupyter notebook / or any platform that works with python.
 
-##### Necessary python modules for this: 
+##### Necessary python libraries for this: 
 * bs4
 * csv
 * requests
