@@ -1,4 +1,4 @@
-This datasetcontains time-series data from the US since 2000 till 2010. How much US$ have been lost every year in tax evasion. Also, includes the Tax Revenue Percentage per country and the current tax rate per country for corporate, and average income. 
+This dataset contains time-series data from the US since 2000 till 2010. How much US$ have been lost every year in tax evasion. Also, includes the Tax Revenue Percentage per country and the current tax rate per country for corporate, and average income. 
 
 ## Data
 The data is sourced from 
