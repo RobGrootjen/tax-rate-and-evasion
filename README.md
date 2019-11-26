@@ -7,7 +7,8 @@ The data is sourced from
 * https://en.wikipedia.org/wiki/Tax_evasion_in_the_United_States
 
 The data is measured in Percentage ("%") and in US$ Billion. The tables further explanation on the headers.
-If data is "0", it means there no data on it. 
+If data is "0", it means there no data on it.
+
 --------------------------------------------------------------------------------------------------------------------------------
 
 ## Preparation
