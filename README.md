@@ -27,13 +27,14 @@ Inside the "Process directory", there is a file called ```process.py``` which wi
 * requests
 
 ##### Instructions:
-* Download "requirements.txt".
+* Download [zipfile](https://github.com/RobGrootjen/tax-rate-and-evasion/archive/master.zip).
 * Go to your terminal and use the following command ```pip install requirements.txt```
-* Copy process.py script
-* Open in jupyter notebook, python shell, VS code, or any preferred platform.
+* Open process.py script in jupyter notebook, python shell, VS code, or any preferred platform.
 * Paste and run the code
 * 3 CSV´s file will be saved in document where your terminal is at the moment.
 
+##### CSV files
+[Click here](https://github.com/RobGrootjen/tax-rate-and-evasion/tree/master/data)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
